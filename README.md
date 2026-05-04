@@ -24,11 +24,10 @@ The infrastructure is built using a modern, layered automation approach. Here is
    - Why I chose Github Actions over Jenkins? You can check the comparison in `jenkins_vs_github_actions.md`.
 
 ## How to Test Locally
-
 To ensure this project works as expected follow these steps:
 
 ### Prerequisites
-- VirtualBox (or VMware/QEMU depending on your OS)
+- VMware Fusion
 - Vagrant
 - Ansible
 
