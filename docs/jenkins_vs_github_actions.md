@@ -1,6 +1,6 @@
 # Jenkins vs. GitHub Actions: A Comparison Guide
 
-This document compares Jenkins and GitHub Actions based on the pipeline I built for **Automation Alchemy**, to help you (and myself also for future reference) understand their syntax, purposes, and practicality in real-life production environment. To be honest, I have only had experience working with Github Actions, so I studied by myself about Jenkins, then I asked AI to summarize for me me the differences. Below is the output that I received, that I have read, learnt and subsequently edited for clarity and relatability to my project.
+This document compares Jenkins and GitHub Actions based on the pipeline I built for **Automation Alchemy**, to help you (and myself also for future reference) understand their syntax, purposes, and practicality in real-life production environment. To be honest, I have only had experience working with Github Actions, so I studied by myself about Jenkins, then I asked AI to summarize for me the differences. Below is the output that I received, that I have read, learnt and edited for clarity and relatability to my project.
 
 ## 1. Syntax Comparison
 
@@ -67,11 +67,9 @@ Our project uses **local Vagrant VMs (192.168.56.x)**.
 
 ### Bonus: Which one should I use for the next project (ELK & Prometheus)
 
-Ditching Jenkins was the best thing I could have done for the next project.
+Ditching Jenkins was the best thing I could have done for the next project. Here is why: 
 
-Here is why: 
-
-To summarize it for you, the next project is about monitoring and logging using ELK and Prometheus. So we need to have a platform to monitor and log the applications and infrastructure. 
+The next project is about monitoring and logging using ELK and Prometheus. So we need to have a platform to monitor and log the applications and infrastructure. 
 
 Separation of Concerns: CI/CD (GitHub Actions) is for Deploying code. Monitoring/Logging (Prometheus, Grafana, ELK) is for Observing the infrastructure. They don't conflict. GitHub Actions will still deploy your updated metrics app, and your VMs will run the monitoring tools.
 For my home lab with limited resources, this is a huge win. 
