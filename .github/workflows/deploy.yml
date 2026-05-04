@@ -54,7 +54,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
 
       # Note on Architecture: GitHub-hosted runners cannot reach private IPs (192.168.56.x).
-      # In a real-world scenario, you would use a self-hosted runner on the local network 
+      # In a real-world scenario, I would use a self-hosted runner on the local network 
       # or deploy to cloud VMs with public/private IPs. This step mocks the execution for learning purposes.
       - name: Deploy Backend
         run: |

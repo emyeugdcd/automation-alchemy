@@ -41,10 +41,10 @@ vagrant destroy -f
 ### 2. Run the Automated Deployment
 You can deploy the entire infrastructure with a single command using the provided script, or run the steps manually:
 ```bash
-# Option A: Single-Command Deployment (Recommended)
+# Option A: Single-Command Deployment (Recommended for project's requirements)
 ./super_deploy.sh
 
-# Option B: Step-by-Step
+# Option B: Step-by-Step (for learning purposes)
 vagrant up
 ansible-playbook -i inventory.ini setup.yml
 ```
@@ -71,7 +71,7 @@ Afterwards, you can go to docs/how-to-test.md to make sure that the project meet
 After you have finised reading the README.md, if there is any confusion about this project (which I am sure there will be some), I suggest you to read the following documents to get a better understanding:
 - An overview of this project can be found here: [Project Overview](./docs/project-overview.md)
 - My learning notes that I took during this module can be found here [Learning Notes](./docs/learning-notes.md). This learning notes serves as a guidance to help you get a better understanding of this project
-- To get a sense of the project infrastructure and deployment flow, pleasen check project walkthrough page: [Project Walkthrough](./docs/project-walkthrough.md)
+- To get a sense of the project infrastructure and deployment flow, please check project walkthrough page: [Project Walkthrough](./docs/project-walkthrough.md)
 - For kood/sisu students, here is a guide on [How to Test](./docs/how-to-test.md) to make sure I have checked all the requirements on the testing page.
 - For those who are interested in learning about Jenkins vs Github Actions, here is a comparison: [Jenkins vs Github Actions](./docs/jenkins_vs_github_actions.md)
 

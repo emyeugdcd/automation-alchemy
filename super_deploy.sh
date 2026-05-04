@@ -8,4 +8,4 @@ echo "Installing Core Infrastructure..."
 ansible-playbook -i inventory.ini setup.yml -e "ansible_user=vagrant devops_password=SuperSecurePassword123!" || ansible-playbook -i inventory.ini setup.yml -e "ansible_user=devops devops_password=SuperSecurePassword123!"
 
 echo "Deployment Scripts Executed!"
-echo "Your GitHub Actions CI/CD will now handle the application deployment when code is pushed!"
+echo "The GitHub Actions CI/CD will now handle the application deployment when code is pushed!"
