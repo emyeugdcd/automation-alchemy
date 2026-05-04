@@ -55,7 +55,8 @@ jobs:
 
       # Note on Architecture: GitHub-hosted runners cannot reach private IPs (192.168.56.x).
       # In a real-world scenario, I would use a self-hosted runner on the local network 
-      # or deploy to cloud VMs with public/private IPs. This step mocks the execution for learning purposes.
+      # or deploy to cloud VMs with public/private IPs. This step mocks the execution for learning purposes. 
+      # For this project, I ran the deployment manually using super_deploy.sh and deploy_apps.sh 
       - name: Deploy Backend
         run: |
           ssh -o StrictHostKeyChecking=no devops@${{ env.BACKEND_IP }} '

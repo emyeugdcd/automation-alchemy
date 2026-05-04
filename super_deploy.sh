@@ -9,3 +9,5 @@ ansible-playbook -i inventory.ini setup.yml -e "ansible_user=vagrant devops_pass
 
 echo "Deployment Scripts Executed!"
 echo "The GitHub Actions CI/CD will now handle the application deployment when code is pushed!"
+echo "Triggering local deployment since GitHub Actions cannot reach local VMs..."
+./deploy_apps.sh

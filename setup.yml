@@ -206,6 +206,13 @@
         state: present
       when: inventory_hostname in ['appserver', 'webserver1', 'webserver2']
 
+    - name: Add devops user to docker group
+      user:
+        name: devops
+        groups: docker
+        append: yes
+      when: inventory_hostname in ['appserver', 'webserver1', 'webserver2']
+
     - name: Install Nginx for Loadbalancing
       apt:
         name: nginx

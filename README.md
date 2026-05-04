@@ -39,14 +39,9 @@ vagrant destroy -f
 ```
 
 ### 2. Run the Automated Deployment
-You can deploy the entire infrastructure with a single command using the provided script, or run the steps manually:
+You can deploy the entire infrastructure with a single command using the provided script:
 ```bash
-# Option A: Single-Command Deployment (Recommended for project's requirements)
 ./super_deploy.sh
-
-# Option B: Step-by-Step (for learning purposes)
-vagrant up
-ansible-playbook -i inventory.ini setup.yml
 ```
 
 ### 3. Verify the Setup
@@ -63,7 +58,8 @@ http://192.168.56.11
 From here, you can verify that the app loads properly and infrastructure metrics are displayed correctly.
 
 ### 5. Test CI/CD (Simulated)
-In a real-world scenario (or if using a self-hosted runner), you could test the CI/CD pipeline by pushing a commit to the `main` branch. GitHub Actions will automatically trigger the `deploy.yml` workflow to run tests, build artifacts, and deploy updates to the servers.
+In a real-world scenario (or if using a self-hosted runner), you could test the CI/CD pipeline by pushing a commit to the `main` branch. GitHub Actions will automatically trigger the `deploy.yml` workflow to run tests, build artifacts, and deploy updates to the servers. However, with GitHub Actions, it is physically impossible for a public cloud server to ping [IP_ADDRESS], because that is a private IP address that only exists on your local machine. The connection will just time out. Therefore, for demonstrating and learning purposes, I have added a `deploy_apps.sh` script that does the same thing as the `deploy.yml` workflow, but without the need for a self-hosted runner to be executed.
+This script will run automatically after the `super_deploy.sh` script completes, so you don't need to run it manually.
 
 Afterwards, you can go to docs/how-to-test.md to make sure that the project meets all the requirements. I have included there the guidance of what you need to check for and what commands are needed and so on to help make your work easier.
 
@@ -74,13 +70,14 @@ After you have finised reading the README.md, if there is any confusion about th
 - To get a sense of the project infrastructure and deployment flow, please check project walkthrough page: [Project Walkthrough](./docs/project-walkthrough.md)
 - For kood/sisu students, here is a guide on [How to Test](./docs/how-to-test.md) to make sure I have checked all the requirements on the testing page.
 - For those who are interested in learning about Jenkins vs Github Actions, here is a comparison: [Jenkins vs Github Actions](./docs/jenkins_vs_github_actions.md)
-
+- My notes about github actions and the errors I have encountered and how I fixed them, can be found here: [Github-Actions-notes.md](./docs/Github-Actions-notes.md)
 
 ## Repository Structure
 
 - `Vagrantfile`: Defines the virtual machines.
 - `setup.yml`: The Ansible playbook for server configuration.
 - `super_deploy.sh`: A single-command script to trigger the entire build process.
+- `deploy_apps.sh`: A single-command script to deploy the applications.
 - `inventory.ini`: The Ansible inventory file.
 - `.README.md`: Self explanatory.
 - `docs/`: All documents related to this project.

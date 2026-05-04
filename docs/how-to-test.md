@@ -9,7 +9,7 @@ Ask the student to describe the files and scripts used for environment automatio
 
 3. Student demonstrates proficiency with at least one automation and CI/CD tool
 Ask the student to explain their choice of automation and CI/CD tools, comparing them to other available options.
-**How to test:** Student should be able to articulate why they used GitHub Actions vs Jenkins, and Ansible vs manual scripts.
+**How to test:** Student should be able to articulate why they used GitHub Actions vs Jenkins.
 
 4. Automation scripts successfully create the required environment
 The student must demonstrate their scripts creating at least 5 VMs with proper network and administrative configurations from a blank slate, without manual intervention.
@@ -34,6 +34,9 @@ Ask the student to demonstrate how the CI/CD pipeline detects and reacts to code
 9. CI/CD pipeline successfully deploys application updates
 Ask the student to show error-free CI/CD logs and demonstrate that the newly deployed version is live and has replaced the previous one.
 **How to test:** Review the pipeline logs to ensure success, then refresh the browser to see the updated changes live.
+
+**Note**: From number 10 to 26, refer to this link from infra-insight project. It's the same.
+https://github.com/emyeugdcd/infrastructure-insight/blob/main/how-to-test.md
 
 10. Automation creates 5 VMs with descriptive names and correct hostname configuration
 Ask the student to demonstrate hostname resolution.
@@ -116,4 +119,4 @@ Ask the student to demonstrate the fully automated creation of the environment a
 **How to test:** Run `./super_deploy.sh` and observe it spinning up Vagrant, running Ansible, building Docker containers, and launching the app without any manual input.
 
 30. Student has implemented additional technologies, security enhancements and/or features beyond the core requirements
-**How to test:** The student showcases additional tools integrated (like Prometheus for monitoring) or advanced network configurations.
+**How to test:** Netdata, UFW, WireGuard, etc. are all added for security enhancements and monitoring. 
