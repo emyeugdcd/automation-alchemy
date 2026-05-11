@@ -12,6 +12,13 @@
         upgrade: dist
         update_cache: yes
 
+    - name: Stop cloud-init from overwriting /etc/hosts
+      lineinfile:
+        path: /etc/cloud/cloud.cfg
+        regexp: "^ - update_etc_hosts"
+        state: absent
+      ignore_errors: yes
+
     - name: Map hostnames in /etc/hosts statically
       blockinfile:
         path: /etc/hosts
@@ -29,6 +36,13 @@
         password: "{{ devops_password | password_hash('sha512', 'mysecretsalt') }}"
         shell: /bin/bash
         create_home: yes
+
+    - name: Remove Vagrant insecure sudo exemption (force password for sudo)
+      lineinfile:
+        path: /etc/sudoers
+        regexp: "^Defaults.*exempt_group=sudo"
+        state: absent
+      validate: '/usr/sbin/visudo -cf %s'
 
     - name: Ensure .ssh directory exists for devops
       file:
