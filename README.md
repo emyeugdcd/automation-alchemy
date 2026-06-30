@@ -1,4 +1,11 @@
-# Automation Alchemy
+<div align="center">
+  <h1>Automation Alchemy</h1>
+  <p><strong>A scrub nurse running on Cloud: Chapter 3 of 8. A foundational DevOps journey into Infrastructure as Code, Linux Administration, and Server Security, with end-to-end automation using Github Actions (CI/CD) and Docker.</strong></p>
+</div>
+
+---
+
+# Project Overview
 
 Welcome to **Automation Alchemy**, the third chapter of the 8-part DevOps module! 
 

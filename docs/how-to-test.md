@@ -1,3 +1,5 @@
+This is the how-to-test guide based on the testing requirements provided by kood/sisu to give you an overview of how to test the project.
+
 1. The student has no project-related VMs running
 The review will commence from a blank slate. All processes must be executed live, showcasing automated scripts. Any manual intervention will result in project failure.
 **How to test:** Run `vagrant status` and ensure no VMs are currently running. Destroy them with `vagrant destroy -f` if any exist.
