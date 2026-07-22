@@ -7,7 +7,7 @@
 
 # Project Overview
 
-Welcome to **Automation Alchemy**, the third chapter of my 8-part DevOps journey! 
+Hello and welcome to **Automation Alchemy**, the third chapter of my 8-part DevOps journey! 
 
 This project is an upgraded and enhanced version of the previous projects, *Infrastructure Insight* and *Server Sorcery* which is available on my Github Profile github.com/emyeugdcd/infra-insight and github.com/emyeugdcd/server-sorcery. While the previous projects focused on manually provisioning and configuring our servers, this chapter introduces **end-to-end automation** and **Continuous Integration / Continuous Deployment (CI/CD)** using Github Actions.
 
